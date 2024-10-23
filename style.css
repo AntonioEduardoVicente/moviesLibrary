@@ -1,0 +1,91 @@
+:root {
+    --primary-color: #27213C;
+    --light-primay-color: #C4BDDB;
+    --lighest-color: #FCF7F8;
+    --secondary-color: #4C6663;
+    --light-secondary-color: #C4D4D2;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+header {
+    padding: 1.5rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-color);
+    color: var(--lighest-color);
+}
+
+#searchContainer {
+    display: flex;
+    align-items: center;
+    width: 50%;
+}
+
+header > h2 > i {
+    margin-right: 0.5rem;
+}
+
+.nameWrapper {
+    width: 65%;
+    display: flex;
+    flex-wrap: nowrap;
+    align-self: center;
+}
+
+.yearWrapper {
+    width: 25%;
+    display: flex;
+    align-items: center;
+    margin-left: 5rem;
+}
+
+#searchButton {
+    width: 5%;
+}
+
+.yearWrapper > input {
+    max-width: 5rem;
+}
+
+.nameWrapper > input {
+    width: 100%;
+}
+
+.nameWrapper > input, .yearWrapper > input {
+    margin: 0 0.5rem;
+    border-radius: 7px;
+    padding: 0.3em;
+    font-weight: bold;
+    font-size: medium;
+}
+
+.nameWrapper > label, .yearWrapper > label {
+    font-weight: bold;
+}
+
+#searchButton {
+    all:unset;  
+    color: var(--light-secondary-color); 
+    padding: 0.3rem;
+    border: 2px solid var(--lighest-color);
+    border-radius: 10px;
+}
+
+#searchButton:focus{
+    background-color: var(--light-primay-color);
+    color: #27213C;
+    transition: 0.3s;
+}
+
+#searchButton:hover {
+    background-color: var(--light-primay-color);
+    color: #27213C;
+    transition: 0.3s;
+}
