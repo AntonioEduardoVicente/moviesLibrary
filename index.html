@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="modal.css">
     <title>Movie Library</title>
 </head>
 <body>
@@ -21,9 +22,18 @@
             </div>
             <button  id="searchButton"><i class="bi bi-search" onclick="batata()"></i></button>
         </section>
-        
     </header>
     <main>
+        <h2>My Library</h2>
+        <section id="movieList">
+
+        </section>
+        <article id="modalOverlay">
+            <section id="modalBackground"></section>
+            <section id="modalContainer">
+                <h3>Movie Title</h3>
+            </section>
+        </article>
     </main>
     <script src="script.js"></script>
 </body>
