@@ -81,6 +81,10 @@ input {
     font-weight: bold;
 }
 
+.nameWrapper >label {
+    padding-top: 0.4rem;
+}
+
 #searchButton {
     all:unset;  
     color: var(--light-secondary-color); 
