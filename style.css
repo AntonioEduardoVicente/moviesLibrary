@@ -65,6 +65,10 @@ header > h2 > i {
     width: 100%;
 }
 
+input {
+    color: var(--secondary-color);
+}
+
 .nameWrapper > input, .yearWrapper > input {
     margin: 0 0.5rem;
     border-radius: 7px;
@@ -83,6 +87,7 @@ header > h2 > i {
     padding: 0.3rem;
     border: 2px solid var(--lighest-color);
     border-radius: 10px;
+    cursor: pointer;
 }
 
 #searchButton:focus{

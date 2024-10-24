@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,19 +9,20 @@
     <link rel="stylesheet" href="modal.css">
     <title>Movie Library</title>
 </head>
+
 <body>
     <header>
         <h2><i class="bi bi-film"></i>Movies Library</h2>
         <section id="searchContainer">
             <div class="nameWrapper">
-                <label for="movieName">Name: </label>        
+                <label for="movieName">Name: </label>
                 <input type="text" id="movieName">
             </div>
             <div class="yearWrapper">
                 <label for="movieYear">Year: </label>
                 <input type="text" id="movieYear">
             </div>
-            <button  id="searchButton"><i class="bi bi-search" onclick="batata()"></i></button>
+            <button id="searchButton"><i class="bi bi-search" onclick="batata()"></i></button>
         </section>
     </header>
     <main>
@@ -28,13 +30,36 @@
         <section id="movieList">
 
         </section>
-        <article id="modalOverlay">
+        <article id="modalOverlay" class="overlay">
             <section id="modalBackground"></section>
             <section id="modalContainer">
-                <h3>Movie Title</h3>
+                <h3 id="movieTitle">The GrandFather - 1998</h3>
+                <section id="modalBody">
+                    <img src="https://m.media-amazon.com/images/M/MV5BMzJmYWIzYmYtYjVlOS00OGI4LTg4YmUtZTkyZjg0ODJiNDY0XkEyXkFqcGdeQXVyMTA0MjU0Ng@@._V1_SX300.jpg"
+                        alt="poster de filme" id="moviePoster">
+                    <div id="movieInfo">
+                        <h5 id="moviePlot">After his son dies, an elderly man comes back to Spain from the US and hopes                     
+                            to find out which of his granddaughters is true and which one is bastard</h5>
+                        <div id="movieCast">    
+                            <h4>
+                                Actors
+                            </h4>
+                            <h5>Fernando Fernán Gómez, Rafael Alonso, Cayetana Guillén Cuervo",</h5>
+                        </div>
+                        <div id="movieGenre">    
+                            <h4>
+                             Genre
+                            </h4>
+                            <h5>Drama</h5>
+                        </div>    
+                    </div>
+                </section>
+                <section id="modalFoteer">
+                    <button id="addToList">Add to library</button>
+                </section>
             </section>
         </article>
     </main>
-    <script src="script.js"></script>
+    <script src="modal.js"></script>
 </body>
 </html>
