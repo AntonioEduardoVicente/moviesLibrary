@@ -1,40 +1,31 @@
 {
-    "Title": "The Grandfather",
-    "Year": "1998",
-    "Rated": "PG",
-    "Released": "30 Oct 1998",
-    "Runtime": "151 min",
-    "Genre": "Drama",
-    "Director": "José Luis Garci",
-    "Writer": "José Luis Garci, Benito Pérez Galdós, Horacio Valcárcel",
-    "Actors": "Fernando Fernán Gómez, Rafael Alonso, Cayetana Guillén Cuervo",
-    "Plot": "After his son dies, an elderly man comes back to Spain from the US and hopes to find out which of his granddaughters is true and which one is bastard.",
-    "Language": "Spanish",
-    "Country": "Spain",
-    "Awards": "Nominated for 1 Oscar. 9 wins & 18 nominations total",
-    "Poster": "https://m.media-amazon.com/images/M/MV5BMzJmYWIzYmYtYjVlOS00OGI4LTg4YmUtZTkyZjg0ODJiNDY0XkEyXkFqcGdeQXVyMTA0MjU0Ng@@._V1_SX300.jpg",
-    "Ratings": [
-        {
-            "Source": "Internet Movie Database",
-            "Value": "7.3/10"
-        },
-        {
-            "Source": "Rotten Tomatoes",
-            "Value": "53%"
-        },
-        {
-            "Source": "Metacritic",
-            "Value": "57/100"
-        }
-    ],
-    "Metascore": "57",
-    "imdbRating": "7.3",
-    "imdbVotes": "2,056",
-    "imdbID": "tt0176415",
-    "Type": "movie",
-    "DVD": "N/A",
-    "BoxOffice": "$54,468",
-    "Production": "N/A",
-    "Website": "N/A",
-    "Response": "True"
+  "Title": "Star Wars: Episode V - The Empire Strikes Back",
+  "Year": "1980",
+  "Rated": "PG",
+  "Released": "18 Jun 1980",
+  "Runtime": "124 min",
+  "Genre": "Action, Adventure, Fantasy",
+  "Director": "Irvin Kershner",
+  "Writer": "Leigh Brackett, Lawrence Kasdan, George Lucas",
+  "Actors": "Mark Hamill, Harrison Ford, Carrie Fisher",
+  "Plot": "After the Empire overpowers the Rebel Alliance, Luke Skywalker begins his Jedi training with Yoda. At the same time, Darth Vader and bounty hunter Boba Fett pursue his friends across the galaxy.",
+  "Language": "English",
+  "Country": "United States",
+  "Awards": "Won 1 Oscar. 27 wins & 20 nominations total",
+  "Poster": "https://m.media-amazon.com/images/M/MV5BMTkxNGFlNDktZmJkNC00MDdhLTg0MTEtZjZiYWI3MGE5NWIwXkEyXkFqcGc@._V1_SX300.jpg",
+  "Ratings": [
+    { "Source": "Internet Movie Database", "Value": "8.7/10" },
+    { "Source": "Rotten Tomatoes", "Value": "95%" },
+    { "Source": "Metacritic", "Value": "82/100" }
+  ],
+  "Metascore": "82",
+  "imdbRating": "8.7",
+  "imdbVotes": "1,405,212",
+  "imdbID": "tt0080684",
+  "Type": "movie",
+  "DVD": "N/A",
+  "BoxOffice": "$292,753,960",
+  "Production": "N/A",
+  "Website": "N/A",
+  "Response": "True"
 }

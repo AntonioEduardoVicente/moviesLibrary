@@ -1,24 +1,45 @@
-const searchButton = document.getElementById('searchButton');
+const key = "3f3f507b";
+const searchButton = document.getElementById("searchButton");
+const overlay = document.getElementById("modalOverlay");
+const movieName = document.getElementById("movieName");
+const movieYear = document.getElementById("movieYear");
 
-const overlay = document.getElementById('modalOverlay');
-
-const movieName = document.getElementById('movieName');
-const movieYear = document.getElementById('movieYear');
-
-async function searchButtonClickHandler (){
-    let url = (`http://www.omdbapi.com/?apikey=[a62935bf]&t=${movieName.value
-        .split(' ')
-        .join('+')}&${movieYear.value}
-        `);
-    overlay.classList.add('open');
+async function searchButtonClickHandler() {
+  try {
+    let url = `http://www.omdbapi.com/?apikey=${key}&t=${movieNameParameterGen()}&y=${movieYearParameterGen()}
+        `;
     const response = await fetch(url);
     const data = await response.json();
-    console.log('data:', data)
-    
-    // console.log(movieName.value.split(' ').join('+'));
-    // console.log('year:  ', movieYear.value);
-
+    console.log("data:", data);
+    overlay.classList.add("open");
+    if (data.Error) {
+        throw new Error('Movie not Found')
+    }
+    } catch (error) {
+    notie.alert({type: 'error',
+        text: error.message});
+  }
+  
 }
 
-searchButton.addEventListener('click', searchButtonClickHandler);
+function movieNameParameterGen() {
+  if (movieName.value === "") {
+    throw new Error("The movie name must be informed");
+  }
+  return movieName.value.split(" ").join("+");
+}
 
+function movieYearParameterGen() {
+    if (movieYear.value === '') {
+        return '';
+    } 
+    if (movieYear.value.length !== 4 || Number.isNaN(Number(movieYear.value))) {
+        throw new Error('The movie year must have 4 numbers, and none letters')
+    }
+
+    return `&=${movieYear.value}`
+    
+}
+
+searchButton.addEventListener("click", searchButtonClickHandler);
+ 
