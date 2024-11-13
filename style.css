@@ -114,3 +114,7 @@ main {
     color: var(--primary-color);
 }
 
+#movieList {
+    display: flex;
+    
+}
