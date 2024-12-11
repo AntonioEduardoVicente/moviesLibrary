@@ -11,10 +11,11 @@ async function searchButtonClickHandler() {
     const response = await fetch(url);
     const data = await response.json();
     console.log("data:", data);
-    overlay.classList.add("open");
     if (data.Error) {
         throw new Error('Movie not Found')
     }
+    createModal(data);
+    overlay.classList.add("open");
     } catch (error) {
     notie.alert({type: 'error',
         text: error.message});
