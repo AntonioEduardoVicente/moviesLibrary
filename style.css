@@ -145,9 +145,7 @@ main {
     background-color: var(--light-secondary-color);
     
     margin-left: 135px;
-
 }
-
 .removeButton:hover {
     background-color: var(--secondary-color);
     color: var(--lighest-color);    

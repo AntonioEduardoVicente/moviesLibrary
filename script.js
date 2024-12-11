@@ -3,6 +3,9 @@ const searchButton = document.getElementById("searchButton");
 const overlay = document.getElementById("modalOverlay");
 const movieName = document.getElementById("movieName");
 const movieYear = document.getElementById("movieYear");
+const movieListContainer = document.getElementById("movieList");
+
+let movieList = [];
 
 async function searchButtonClickHandler() {
   try {
@@ -40,6 +43,10 @@ function movieYearParameterGen() {
 
     return `&=${movieYear.value}`
     
+}
+
+function addToList(movieObject) {
+  movieList.push(movieObject);
 }
 
 searchButton.addEventListener("click", searchButtonClickHandler);
