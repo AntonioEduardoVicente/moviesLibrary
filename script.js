@@ -9,7 +9,7 @@ let movieList = [];
 
 async function searchButtonClickHandler() {
   try {
-    let url = `http://www.omdbapi.com/?apikey=${key}&t=${movieNameParameterGen()}&y=${movieYearParameterGen()}
+    let url = `https://www.omdbapi.com/?apikey=${key}&t=${movieNameParameterGen()}&y=${movieYearParameterGen()}
         `;
     const response = await fetch(url);
     const data = await response.json();
@@ -49,5 +49,30 @@ function addToList(movieObject) {
   movieList.push(movieObject);
 }
 
-searchButton.addEventListener("click", searchButtonClickHandler);
- 
+function isMovieAlreadyInList(id) {
+  function doesItBelongToThisMovie(movieObject) {
+    return movieObject.imdbID === id;
+  }
+  return Boolean(movieList.find(doesItBelongToThisMovie));
+}
+
+function updateUI(movieObject){
+  movieListContainer.innerHTML += `<article id="movie-card-${movieObject.imdbID}">
+  <img
+    src="${movieObject.Poster}" 
+    alt="${movieObject.Title} poster."
+  >
+  <button class="removeButton" onclick="{removeFilmFromList('${movieObject.imdbID}')}">
+    <i class="bi bi-trash-fill"></i>
+  </button>
+  </article>`;
+}
+
+function removeFilmFromList(id) {
+  movieList =  movieList.filter((movie) => movie.imdbID !== id);
+  document.getElementById(`movie-card-${id}`).remove();
+}
+
+searchButton.addEventListener("click", searchButtonClickHandler); 
+
+

@@ -10,7 +10,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family:'Oswald';
 }
 
 body {
@@ -55,6 +55,7 @@ header > h2 > i {
 
 #searchButton {
     width: 5%;
+    
 }
 
 .yearWrapper > input {
@@ -131,6 +132,11 @@ main {
 #movieList article > img {
     border-radius: 10px;
     margin-bottom: 0.5rem;
+    height: 450px;
+    width: 300px;
+    margin-left: 20px;
+    margin-right: 20px;
+    
 }
 
 .removeButton {
@@ -140,17 +146,21 @@ main {
     background-color: #C4BDDB;
     border-radius: 5px;
     padding: 0.2rem 0;
-    width: 10%;
+    width: 87%;    
     color: var(--primary-color);
-    background-color: var(--light-secondary-color);
-    
-    margin-left: 135px;
+    background-color:var(--light-primay-color);
+    margin-left: 22px;
+    box-shadow: 4px 4px 10px;
+    font-size: large;
+    font-weight: 550;
 }
+
 .removeButton:hover {
     background-color: var(--secondary-color);
     color: var(--lighest-color);    
     transition: 0.1s;
     border:1.5px solid var(--secondary-color);
+    box-shadow: 5px 5px 12px black;
 } 
 
 

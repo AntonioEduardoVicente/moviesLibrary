@@ -1,11 +1,28 @@
 const background = document.getElementById('modalBackground');
 let modalContainer = document.getElementById('modalContainer');
 
+let currentMovie = {};
+
 function backgroundClickHandler() {
     overlay.classList.remove('open');
 };
 
+function closeModal() {
+    overlay.classList.remove("open");
+}
+
+function addCurrentMovieTolist(){
+    if (isMovieAlreadyInList(currentMovie.imdbID)) {
+        notie.alert({type: "error", text: "Movie already in list!"});
+        return;
+    }
+    addToList(currentMovie);
+    updateUI(currentMovie);
+    closeModal();
+}
+
 function createModal(data) {
+    currentMovie = data;
     modalContainer.innerHTML = `
     <h3 id="movieTitle">${data.Title} - ${data.Year}</h3>
                 <section id="modalBody">
@@ -31,9 +48,10 @@ function createModal(data) {
                     </div>
                 </section>
                 <section id="modalFoteer">
-                    <button id="addToList"  onclick="backgroundClickHandler()">Add</button>
+                    <button id="addToList"  onclick="{addCurrentMovieTolist()}" >Add</button>
                 </section> `;
 };
 
 
 background.addEventListener('click', backgroundClickHandler);
+
