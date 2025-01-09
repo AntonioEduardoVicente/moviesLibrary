@@ -64,6 +64,12 @@
     justify-content: space-around;
     max-width: 300px;
     color: var(--secondary-color);
+    padding-left: 2rem;
+}
+
+#movieInfo .moviePlot{
+    padding-top: 2rem;
+    
 }
 
 #moviePoster {

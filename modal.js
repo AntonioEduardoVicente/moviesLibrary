@@ -18,6 +18,7 @@ function addCurrentMovieTolist(){
     }
     addToList(currentMovie);
     updateUI(currentMovie);
+    updateLocalStorage();
     closeModal();
 }
 
@@ -29,10 +30,10 @@ function createModal(data) {
                     <img src="${data.Poster}"
                         alt="poster de filme" id="moviePoster">
                     <div id="movieInfo">
-                        <h4>
-                            Plot
-                        <h4>
-                        <h5 id="moviePlot">${data.Plot}</h5>
+                        <div id="moviePlot">
+                            <h4>Plot:<h4>
+                            <h5>${data.Plot}</h5>
+                        </div>
                         <div id="movieCast">    
                             <h4>
                                 Actors:
